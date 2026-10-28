@@ -84,6 +84,7 @@ export default function Footer({ onOpenApply }) {
               <li><a href="#syllabus" className="hover:text-white transition-colors">Course Syllabus (19 Sessions)</a></li>
               <li><a href="#info-sessions" className="hover:text-white transition-colors">AddisCoder Info Sessions</a></li>
               <li><button onClick={onOpenApply} className="hover:text-white transition-colors text-left">Apply for Course</button></li>
+              <li><a href="#gallery" className="hover:text-white transition-colors">Photo Gallery</a></li>
               <li><a href="#team" className="hover:text-white transition-colors">Founders & Team</a></li>
             </ul>
           </div>

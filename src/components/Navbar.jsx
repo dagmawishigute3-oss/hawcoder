@@ -10,6 +10,7 @@ export default function Navbar({ onOpenApply }) {
     { label: "Syllabus", href: "#syllabus" },
     { label: "AddisCoder Info Sessions", href: "#info-sessions" },
     { label: "Apply", href: "#apply" },
+    { label: "Gallery", href: "#gallery" },
     { label: "Team", href: "#team" },
     { label: "FAQ", href: "#faq" }
   ];

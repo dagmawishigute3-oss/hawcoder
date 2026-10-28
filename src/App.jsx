@@ -7,6 +7,7 @@ import CurriculumViewer from './components/CurriculumViewer';
 import AddisCoderHub from './components/AddisCoderHub';
 import ApplicationSection from './components/ApplicationSection';
 import AlumniSection from './components/AlumniSection';
+import GallerySection from './components/GallerySection';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import RSVPModal from './components/RSVPModal';
@@ -56,7 +57,10 @@ export default function App() {
         {/* 8. Founders & Alumni Team from Hawassa */}
         <AlumniSection />
 
-        {/* 9. Frequently Asked Questions */}
+        {/* 9. Photo Gallery & Classroom Moments */}
+        <GallerySection />
+
+        {/* 10. Frequently Asked Questions */}
         <FAQSection />
       </main>
 
