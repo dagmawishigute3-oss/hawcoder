@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
-export default function Navbar({ onOpenApply, onOpenOrganizer }) {
+export default function Navbar({ onOpenApply }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
     { label: "About", href: "#about" },
+    { label: "Announcements", href: "#announcements" },
     { label: "Syllabus", href: "#syllabus" },
     { label: "AddisCoder Info Sessions", href: "#info-sessions" },
     { label: "Apply", href: "#apply" },

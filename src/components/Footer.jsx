@@ -2,7 +2,7 @@ import React from 'react';
 import { officialDisclaimer } from '../data/infoSessionData';
 import { ExternalLink, AlertCircle } from 'lucide-react';
 
-export default function Footer({ onOpenApply, onOpenRSVP, onOpenAdmin }) {
+export default function Footer({ onOpenApply, onOpenRSVP }) {
   return (
     <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-xs">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-8">
@@ -56,16 +56,7 @@ export default function Footer({ onOpenApply, onOpenRSVP, onOpenAdmin }) {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-[11px]">
           <span>© {new Date().getFullYear()} Hawcoder (Hawassa, Ethiopia).</span>
-          <div className="flex items-center gap-2">
-            <span>Venue Partner: American Corner, Hawassa</span>
-            <span>•</span>
-            <button
-              onClick={onOpenAdmin}
-              className="text-slate-500 hover:text-slate-300 underline transition-colors"
-            >
-              Organizer Portal
-            </button>
-          </div>
+          <span>Venue Partner: American Corner, Hawassa</span>
         </div>
 
       </div>
