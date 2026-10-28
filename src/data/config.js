@@ -8,9 +8,6 @@ export const appConfig = {
   // Google Form for AddisCoder Info Session RSVP / Attendance:
   googleFormInfoSessionUrl: "https://docs.google.com/forms",
   
-  // Telegram community channel / group link:
-  telegramGroupUrl: "https://t.me",
-  
   // Official AddisCoder website:
   addisCoderUrl: "https://www.addiscoder.com"
 };
