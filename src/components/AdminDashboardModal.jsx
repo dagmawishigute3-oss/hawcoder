@@ -149,15 +149,15 @@ export default function AdminDashboardModal({ isOpen, onClose }) {
                 <span>Google Drive &amp; Spreadsheet Destinations</span>
               </h4>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-                {/* Applications Sheet */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                {/* Unified Applications & Transcripts Sheet */}
                 <div className="p-3.5 rounded border border-slate-200 bg-slate-50/70 space-y-2">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 font-semibold">Course Applications Sheet</strong>
+                    <strong className="text-slate-900 font-semibold">Applications &amp; Transcripts</strong>
                     <FileSpreadsheet className="w-4 h-4 text-emerald-600" />
                   </div>
-                  <p className="text-slate-500 text-[11px]">
-                    Responses and applicant list submitted by high school students.
+                  <p className="text-slate-500 text-[11px] leading-relaxed">
+                    One unified Google Sheet: student details and direct clickable links to their uploaded transcripts sit side-by-side in each row.
                   </p>
                   <a
                     href="https://sheets.google.com"
@@ -165,27 +165,7 @@ export default function AdminDashboardModal({ isOpen, onClose }) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-blue-800 hover:underline font-medium text-xs pt-1"
                   >
-                    <span>Open Google Sheets</span>
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
-                </div>
-
-                {/* Transcripts Drive Folder */}
-                <div className="p-3.5 rounded border border-slate-200 bg-slate-50/70 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 font-semibold">Transcripts Folder</strong>
-                    <Folder className="w-4 h-4 text-amber-600" />
-                  </div>
-                  <p className="text-slate-500 text-[11px]">
-                    Uploaded PDF and photo report cards stored in your Google Drive.
-                  </p>
-                  <a
-                    href="https://drive.google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-blue-800 hover:underline font-medium text-xs pt-1"
-                  >
-                    <span>Open Google Drive</span>
+                    <span>Open Master Sheet</span>
                     <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
@@ -193,11 +173,11 @@ export default function AdminDashboardModal({ isOpen, onClose }) {
                 {/* Info Sessions RSVPs Sheet */}
                 <div className="p-3.5 rounded border border-slate-200 bg-slate-50/70 space-y-2">
                   <div className="flex items-center justify-between">
-                    <strong className="text-slate-900 font-semibold">Info Session RSVPs Sheet</strong>
+                    <strong className="text-slate-900 font-semibold">Info Session RSVPs</strong>
                     <FileSpreadsheet className="w-4 h-4 text-blue-600" />
                   </div>
-                  <p className="text-slate-500 text-[11px]">
-                    Student names, grades, and questions submitted for the AddisCoder info session.
+                  <p className="text-slate-500 text-[11px] leading-relaxed">
+                    Attendee registration roster, high schools, and questions submitted for the AddisCoder info session.
                   </p>
                   <a
                     href="https://sheets.google.com"
@@ -216,8 +196,8 @@ export default function AdminDashboardModal({ isOpen, onClose }) {
                     <strong className="text-slate-900 font-semibold">Edit Google Forms</strong>
                     <Settings className="w-4 h-4 text-slate-600" />
                   </div>
-                  <p className="text-slate-500 text-[11px]">
-                    Add/change questions, modify eligibility, or adjust deadline dates.
+                  <p className="text-slate-500 text-[11px] leading-relaxed">
+                    Easily update application questions, cohort dates, or registration criteria anytime.
                   </p>
                   <a
                     href="https://forms.google.com"
