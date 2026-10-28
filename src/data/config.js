@@ -11,14 +11,13 @@ export const appConfig = {
   // Official AddisCoder website:
   addisCoderUrl: "https://www.addiscoder.com",
 
-  // Social Media Channels:
+  // Social Media Channels (with placeholders):
   socialLinks: {
     telegram: "https://t.me/hawcoder",
-    github: "https://github.com/hawcoder",
-    linkedin: "",
-    youtube: "",
-    x: "",
-    email: "contact@hawcoder.org"
+    instagram: "https://instagram.com/hawcoder",
+    youtube: "https://youtube.com/@hawcoder",
+    linkedin: "https://linkedin.com/company/hawcoder",
+    github: "https://github.com/hawcoder"
   }
 };
 
