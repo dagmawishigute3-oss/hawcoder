@@ -1,5 +1,5 @@
 // Hawcoder Site Configuration
-// Update these Google Form links whenever you host a new cohort or info session!
+// Update these links whenever you host a new cohort or update channels!
 
 export const appConfig = {
   // Google Form for Hawcoder Course Cohort Registration:
@@ -9,5 +9,29 @@ export const appConfig = {
   googleFormInfoSessionUrl: "https://docs.google.com/forms",
   
   // Official AddisCoder website:
-  addisCoderUrl: "https://www.addiscoder.com"
+  addisCoderUrl: "https://www.addiscoder.com",
+
+  // Social Media Channels:
+  socialLinks: {
+    telegram: "https://t.me/hawcoder",
+    github: "https://github.com/hawcoder",
+    linkedin: "",
+    youtube: "",
+    x: "",
+    email: "contact@hawcoder.org"
+  }
+};
+
+// Helper to get active social links (with localStorage support)
+export const getSocialLinks = () => {
+  try {
+    const saved = localStorage.getItem('hawcoder_social_links');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      return { ...appConfig.socialLinks, ...parsed };
+    }
+  } catch (e) {
+    console.error('Error loading social links', e);
+  }
+  return appConfig.socialLinks;
 };
