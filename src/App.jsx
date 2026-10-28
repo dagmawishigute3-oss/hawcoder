@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import DisclaimerBanner from './components/DisclaimerBanner';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -9,11 +9,25 @@ import AlumniSection from './components/AlumniSection';
 import FAQSection from './components/FAQSection';
 import Footer from './components/Footer';
 import RSVPModal from './components/RSVPModal';
-import AdminExportModal from './components/AdminExportModal';
+import AdminDashboardModal from './components/AdminDashboardModal';
 
 export default function App() {
   const [isRSVPOpen, setIsRSVPOpen] = useState(false);
-  const [isOrganizerOpen, setIsOrganizerOpen] = useState(false);
+  const [isAdminOpen, setIsAdminOpen] = useState(false);
+
+  useEffect(() => {
+    // Open admin dashboard if URL contains #admin
+    if (window.location.hash === '#admin') {
+      setIsAdminOpen(true);
+    }
+    const handleHashChange = () => {
+      if (window.location.hash === '#admin') {
+        setIsAdminOpen(true);
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
 
   const scrollToApply = () => {
     const el = document.getElementById('apply');
@@ -31,7 +45,6 @@ export default function App() {
       {/* 2. Simple Header & Navigation with Logo */}
       <Navbar 
         onOpenApply={scrollToApply}
-        onOpenOrganizer={() => setIsOrganizerOpen(true)}
       />
 
       {/* 3. Main Content: About, Syllabus, AddisCoder Guidance, Apply, Team, FAQ */}
@@ -50,9 +63,7 @@ export default function App() {
         />
 
         {/* 6. Hawcoder Student Registration Portal */}
-        <ApplicationSection 
-          onOpenOrganizer={() => setIsOrganizerOpen(true)}
-        />
+        <ApplicationSection />
 
         {/* 7. Founders & Alumni Team from Hawassa */}
         <AlumniSection />
@@ -65,6 +76,7 @@ export default function App() {
       <Footer 
         onOpenApply={scrollToApply}
         onOpenRSVP={() => setIsRSVPOpen(true)}
+        onOpenAdmin={() => setIsAdminOpen(true)}
       />
 
       {/* Lightweight Modals */}
@@ -73,9 +85,15 @@ export default function App() {
         onClose={() => setIsRSVPOpen(false)} 
       />
 
-      <AdminExportModal 
-        isOpen={isOrganizerOpen} 
-        onClose={() => setIsOrganizerOpen(false)} 
+      {/* Dedicated Passcode-Protected Admin Dashboard */}
+      <AdminDashboardModal 
+        isOpen={isAdminOpen} 
+        onClose={() => {
+          setIsAdminOpen(false);
+          if (window.location.hash === '#admin') {
+            history.replaceState(null, '', window.location.pathname);
+          }
+        }} 
       />
 
     </div>

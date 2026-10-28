@@ -49,14 +49,6 @@ export default function Navbar({ onOpenApply, onOpenOrganizer }) {
           {/* Action CTAs */}
           <div className="hidden sm:flex items-center gap-3">
             <button
-              onClick={onOpenOrganizer}
-              className="text-xs text-slate-500 hover:text-slate-800 border border-slate-200 px-2.5 py-1.5 rounded transition-colors"
-              title="Organizer Portal (Export registrations to CSV)"
-            >
-              Organizer view
-            </button>
-
-            <button
               onClick={onOpenApply}
               className="bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-medium px-4 py-2 rounded transition-colors"
             >
@@ -97,17 +89,6 @@ export default function Navbar({ onOpenApply, onOpenOrganizer }) {
               {link.label}
             </a>
           ))}
-          <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenOrganizer();
-              }}
-              className="text-xs text-slate-500 underline"
-            >
-              Organizer CSV Export
-            </button>
-          </div>
         </div>
       )}
     </nav>

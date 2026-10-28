@@ -84,13 +84,6 @@ export default function AddisCoderHub({ onOpenRSVP }) {
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
 
-                <button
-                  onClick={onOpenRSVP}
-                  className="text-[11px] text-slate-500 hover:text-slate-800 underline block mx-auto"
-                >
-                  Or register locally
-                </button>
-
                 <span className="text-[11px] text-slate-400 block pt-1 border-t border-slate-100">
                   American Corner, Hawassa
                 </span>
@@ -99,14 +92,6 @@ export default function AddisCoderHub({ onOpenRSVP }) {
             </div>
           </div>
         ))}
-
-        {/* Info Session Google Drive Note */}
-        <div className="rounded border border-slate-200 bg-slate-50 p-3.5 text-xs text-slate-600 flex items-start gap-2.5">
-          <Database className="w-4 h-4 text-slate-600 shrink-0 mt-0.5" />
-          <p className="leading-relaxed">
-            <strong>Where RSVPs sit:</strong> Info session registrations submitted through the Google Form sit directly in a dedicated <strong>Google Sheet inside your Google Drive</strong>, with student questions and contact info organized for the organizers.
-          </p>
-        </div>
 
       </div>
     </section>
