@@ -2,8 +2,13 @@
 // Update these links whenever you host a new cohort or update channels!
 
 export const appConfig = {
+  // Whether applications are currently open or closed
+  // Set to true when an application cycle is live, or false when closed
+  applicationsOpen: false,
+
   // Google Form for Hawcoder Course Cohort Registration:
-  googleFormApplicationUrl: "https://docs.google.com/forms",
+  // (Only active when applicationsOpen is true)
+  googleFormApplicationUrl: "",
   
   // Google Form for AddisCoder Info Session RSVP / Attendance:
   googleFormInfoSessionUrl: "https://docs.google.com/forms",
